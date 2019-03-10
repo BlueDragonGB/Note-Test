@@ -10,11 +10,11 @@ http.createServer(function(req, res){
   var fileName = '.'+ q.pathname;
   if(fileName=='./'){fileName = './main'}
 
-  // if(fileName.includes('.html')==false){
-  //   if(fs.exists(fileName + ".html"){
-  //     fileName = fileName +'.html';
-  //   }
-  // }
+  if(fileName.includes('.html')==false){
+    if(fs.exists(fileName + ".html"){
+      fileName = fileName +'.html';
+    }
+  }
   fs.readFile(fileName, function (err, data){
     if(err){
       res.writeHead(404,{'Content-Type': 'text/html'});
