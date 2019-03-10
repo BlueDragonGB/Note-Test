@@ -11,9 +11,9 @@ http.createServer(function(req, res){
   if(fileName=='./'){fileName = './main'}
 
   if(fileName.includes('.html')==false){
-    if(fs.exists(fileName + ".html"){
+    //if(fs.exists(fileName + ".html"){
       fileName = fileName +'.html';
-    }
+    //}
   }
   fs.readFile(fileName, function (err, data){
     if(err){
